@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "productId": "1",
+      "title": "wsdefrgthyu",
+      "brand": "wsdfgh",
+      "price": "123456",
+      "description": "swdefrgty",
+      "thumbnail": "https://subzfresh.com/wp-content/uploads/2022/04/apple_158989157.jpg",
+      "id": 1
+    },
+    {
+      "productId": "2",
+      "title": "qwsedfr",
+      "brand": "wsdfgwedf",
+      "price": "123456123",
+      "description": "swdefrgtywdef",
+      "thumbnail": "https://subzfresh.com/wp-content/uploads/2022/04/apple_158989157.jpg",
+      "id": 2
+    },
+    {
+      "productId": "3",
+      "title": "qwsedfr",
+      "brand": "wsdfgwedf",
+      "price": "123456123",
+      "description": "swdefrgtywdef",
+      "thumbnail": "https://subzfresh.com/wp-content/uploads/2022/04/apple_158989157.jpg",
+      "id": 3
+    },
+    {
+      "productId": "4",
+      "title": "qwsedfr",
+      "brand": "wsdfgwedf",
+      "price": "123456123",
+      "description": "swdefrgtywdef",
+      "thumbnail": "https://subzfresh.com/wp-content/uploads/2022/04/apple_158989157.jpg",
+      "id": 4
+    }
+  ]
+}
