@@ -9,6 +9,7 @@ import Carousel from './components/Carousel'
 import Forms from './components/Forms'
 import Front from './components/Front'
 import List from './components/List'
+import Error from './components/Error'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
       <Routes>
       <Route path='/' element={<Front />} />
       <Route path='/Productdetails' element={<List />} />
+      <Route path='*' element={<Error />} />
       </Routes>
     </div>
     

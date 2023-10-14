@@ -9,10 +9,14 @@ export default function Forms() {
     const [des,setDes]=useState('');
     const [img,setImg]=useState('');
     const [products,setProducts]=useState([{}])
+
+
     const fetchData=()=>{
         axios.get('http://localhost:3002/products')
         .then(res=>setProducts(res.data))
     }
+
+    
 
     const productData={
         productId : id,
@@ -29,6 +33,7 @@ export default function Forms() {
           fetchData()
         });
       }, []);
+
       const handleDelete=(id) => {
         axios.delete(`http://localhost:3002/products/${id}`)
         .then((res) => {
@@ -45,6 +50,17 @@ export default function Forms() {
         })
         
     }
+
+    const handleUpdate = (e)=>{
+        setId(e.id);
+        setTitle(e.title);
+        setBrand(e.brand);
+        setDes(e.description);
+        setImg(e.thumbnail);
+        setPrice(e.price);
+        setId(e.id);
+    }
+
   return (
     <>
     <div className='row justify-content-center'>
@@ -106,8 +122,8 @@ return(
         <td>Rs.{e.price}</td>
         <td>{e.description}</td>
         <td><img height="200px" src={e.thumbnail}/></td>
-        <td><button className='btn btn-primary' >Edit</button>
-        <button className='btn btn-danger' onClick={()=>handleDelete(e.id)}>Delete</button></td>
+        <td><button className='btn btn-primary ' onClick={()=>handleUpdate(e)}><i className='fa fa-solid fa-edit'></i></button>
+        <button className='btn btn-danger' onClick={()=>handleDelete(e.id)}><i className='fa fa-solid fa-trash'></i></button></td>
         </tr>
         </>
       )
