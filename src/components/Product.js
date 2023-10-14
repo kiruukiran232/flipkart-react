@@ -6,7 +6,7 @@ import '../App.css'
 export default function Product() {
     const [products,setProducts]=useState([{}])
     useEffect(()=>{
-        axios.get('https://github.com/kiruukiran232/flipkart-react/blob/main/products').then(res=>setProducts(res.data))
+        axios.get('http://localhost:3002/products').then(res=>setProducts(res.data))
     },0)
     console.log(products);
   return (
