@@ -12,7 +12,7 @@ export default function Forms() {
 
 
     const fetchData=()=>{
-        axios.get('https://github.com/kiruukiran232/flipkart-react/blob/main/products')
+        axios.get('http://localhost:3002/products')
         .then(res=>setProducts(res.data))
     }
 
@@ -28,14 +28,14 @@ export default function Forms() {
     }
     
     useEffect(() => {
-        axios.get('https://github.com/kiruukiran232/flipkart-react/blob/main/products').then((res) => {
+        axios.get('http://localhost:3002/products').then((res) => {
           setProducts(res.data);
           fetchData()
         });
       }, []);
 
       const handleDelete=(id) => {
-        axios.delete(`https://github.com/kiruukiran232/flipkart-react/blob/main/products/${id}`)
+        axios.delete(`http://localhost:3002/products/${id}`)
         .then((res) => {
           alert('Product deleted')
           fetchData()
@@ -44,7 +44,7 @@ export default function Forms() {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.post('https://github.com/kiruukiran232/flipkart-react/blob/main/products',productData).then((res)=>{
+        axios.post('http://localhost:3002/products',productData).then((res)=>{
             alert("Success")
             fetchData()
         })
